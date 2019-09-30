@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to the Jungle</h1>
+    <a href="/new"><button>New animal</button></a>    
+
+    <% for (var x in users) { %>
+        <h5>Name: <%= users[x].name %></h5>
+        <p>Species: <%= users[x].species %> </p>
+        <p>Strength: <%= users[x].strength %></p>
+        <p>Weakness: <%= users[x].weakness %></p>
+        <a href="/edit/<%= users[x]._id %>"><button>Edit</button></a>    
+        <a href="/show/<%= users[x]._id %>"><button>Show</button></a>    
+        <a href="/delete/<%= users[x]._id %>"><button>Delete</button></a>    
+
+    <% } %>
+</body>
+</html>
